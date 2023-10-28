@@ -36,4 +36,17 @@
   }
   ```
 
+  ```js
+  // index.js
+  const PizzaShop = require("./pizza-shop");
+
+  const pizzaShop = new PizzaShop();
+
+  pizzaShop.on("order", (size) => {
+    console.log(`Baking ${size} pizza!`);
+  });
+
+  pizzaShop.order("large");
+  ```
+
 - Most modules like fs, streams, http etc also extend from the EventEmitter class
